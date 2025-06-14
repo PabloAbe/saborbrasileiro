@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css">
+
+  <title>COTIZA TU EVENTO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #008000, #1e90ff);;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 150px;
+      transition: transform 0.5s ease;
+      margin-bottom: 20px;
+    }
+
+    .logo:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #444;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+  background-color: #e67300;
+  color: white;
+  font-size: 14px;         /* menor fonte */
+  padding: 8px 16px;       /* botão mais compacto */
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+    button:hover {
+      background-color: #cc5c00;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .iti {
+  width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo animado -->
+  <img src="logo.png" alt="Sabor Brasileiro" class="logo fade-in">
+  
+
+  <div class="container fade-in">
+    <h1>COTIZA TU EVENTO</h1>
+
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="evento">¿Qué estamos celebrando?</label>
+      <select id="evento" name="evento" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Matrimonio">Matrimonio</option>
+        <option value="Cumpleaños">Cumpleaños</option>
+        <option value="Coctel">Cóctel</option>
+        <option value="Junta con amigos">Junta con amigos</option>
+        <option value="Celebración de empresa">Celebración de empresa</option>
+      </select>
+
+      <label for="fecha">Selector de fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="invitados">¿Cuántos invitados serían?</label>
+      <input type="number" id="invitados" name="invitados" min="0" max="500" required>
+
+      <label for="horario">¿En qué horario sería?</label>
+      <input type="time" id="horario" name="horario" required>
+
+      <label for="comentarios">¿Algún otro comentario?</label>
+      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+      <form id="eventoForm">
+        <!-- ... todos os campos ... -->
+        <button type="submit">ENVIAR</button>
+        <button onclick="window.location.href='index.html'" style="
+  margin-top: 15px;
+  background-color: #999;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+">
+  Volver a Inicio
+</button>
+      </form>
+      
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+<script>
+  const input = document.querySelector("#telefono");
+  window.intlTelInput(input, {
+    initialCountry: "cl", // país inicial (Chile 🇨🇱)
+    preferredCountries: ["cl", "br", "ar", "us"], // favoritos no topo
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
+  });
+  document.getElementById("eventoForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Impede envio real (caso ainda não tenha backend)
+
+    alert("Formulario enviado com éxito!");
+
+    // Redireciona para index.html após 1 segundo
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 1000);
+  });
+  
+</script>
+
+</body>
+</html>

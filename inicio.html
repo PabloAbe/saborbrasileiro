@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Início - Restaurante</title>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    a.logo-link {
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    img.logo {
+      max-width: 350px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    img.logo:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+  </style>
+</head>
+<body>
+  <a href="index.html" target="_blank" class="logo-link" aria-label="Visitar site do restaurante">
+    <img src="logo.png" alt="Logo do Restaurante" class="logo" />
+    <p>BENVENIDO</p>
+    </a>
+  </a>
+</body>
+</html>
