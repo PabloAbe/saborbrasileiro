@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strogonoff - Sabor Brasileiro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="topo">
+    <div class="container">
+      <h1 class="titulo">Strogonoff</h1>
+      <nav><a href="index.html" class="voltar">← Voltar ao cardápio</a></nav>
+    </div>
+  </header>
+  <main class="container detalhe-prato">
+    <div class="imagem-texto">
+      <img src="strogonoff.jpeg" alt="Prato de Strogonoff" class="imagem-prato">
+      <section class="info-prato">
+        <h2>Descripción</h2>
+        <ul class="acompanhamentos">
+          <li>Guiso de Carne de Vacuno o Pollo con Champignon de Crema de Leche</li>
+          <li>ACOMPAÑA:</li>
+          <li>Arroz</li>
+          <li>Papas Fritas </li>
+        </ul>
+        
+        <!-- NOVA SEÇÃO DE VALORES VALORES PARA COLOCAR-->
+      <div class="precio">
+        <br>
+        <h3></h3>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+        <p><strong></strong></p>
+      </div>
+    </section>
+  </div>
+      </section>
+    </div>
+  </main>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  
+    .titulo {
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  text-align: center;
+}
+  
+    h1, h2, p, li {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+    }
+    
+    .imagem-texto {
+  display: flex;
+  align-items: center; /* alinha verticalmente ao centro */
+  justify-content: center; /* centraliza no eixo horizontal */
+  gap: 24px; /* espaço entre imagem e texto */
+  padding: 20px 0;
+}
+
+.imagem-prato {
+  width: 500px;
+  height: 400px;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* impede que a imagem encolha */
+}
+
+.info-prato {
+  text-align: left;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .imagem-texto {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-prato {
+    text-align: center;
+  }
+}
+  </style>
+
+  <footer class="rodape">
+    <p> Copyright 2025 &copy; Sabor Brasileiro</p>
+  </footer>
+</body>
+</html>

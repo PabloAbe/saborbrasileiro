@@ -15,42 +15,105 @@
       margin: 0;
       font-family: Arial, sans-serif;
     }
+
     a.logo-link {
       display: inline-block;
-      cursor: pointer;
+      text-align: center;
       text-decoration: none;
+      color: #333;
+      cursor: pointer;
+      animation: fadeIn 1.2s ease forwards;
     }
+
     img.logo {
       max-width: 350px;
       height: auto;
       transition: transform 0.3s ease;
     }
+
     img.logo:hover {
       transform: scale(1.05);
       filter: brightness(1.2);
     }
 
-    @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .logo-text {
+      margin-top: 10px;
+      font-size: 1.2em;
+      animation: bounceIn 1.5s ease forwards;
+    }
+
+    .logo-text p {
+      margin: 5px 0;
+      color: #006400;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .logo-text p:hover {
+      color: #228B22;
+    }
+
+    .logo-text .arrow {
+      font-size: 1.4em;
+      animation: pulse 1.2s infinite;
+      display: block;
+      margin-top: 8px;
+      color: #FF4500;
+    }
+
+    .arrow-up-css {
+  width: 0;
+  height: 0;
+  margin: 10px auto 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #d32f2f;
+  animation: bounce 1.2s infinite;
 }
 
-.fade-in {
-  animation: fadeIn 1.2s ease forwards;
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+      }
+    }
   </style>
 </head>
 <body>
   <a href="index.html" target="_blank" class="logo-link" aria-label="Visitar site do restaurante">
     <img src="logo.png" alt="Logo do Restaurante" class="logo" />
-    <p>BENVENIDO</p>
-    </a>
+    <div class="arrow-up-css"></div>
+    <div class="logo-text">
+      <p>Bienvenido a Sabor Brasileiro</p>
+      <p>Haga clic en el logo para acceder a nuestra página</p>
+   
+    </div>
   </a>
 </body>
 </html>

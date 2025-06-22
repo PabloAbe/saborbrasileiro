@@ -13,7 +13,7 @@
   
   header {
     background-color: #000;
-    padding: 20px;
+    padding: 1px;
     text-align: center;
     border-bottom: 2px solid #333;
   }
@@ -22,6 +22,7 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
     color: #f8b500;
+    
   }
   
   nav ul {
@@ -45,7 +46,7 @@
   }
   
   nav a:hover {
-    color: #f8b500;
+    color: #1bb537;
   }
   
   main {
@@ -204,14 +205,15 @@
     padding: 0;
     display: inline-block;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #222;
-    padding: 20px;
+    padding: 10px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
   }
   
   .acompanhamentos li {
+    font-style: italic;
     margin-bottom: 10px;
     font-size: 1.1em;
   }
@@ -228,61 +230,62 @@
   }
 
   #contacto {
-    background-color: #000;
-    color: #fff;
-    padding: 5px 15px;                /* Menos espaço interno */
-    text-align: center;
+    padding: 40px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    max-height: 300px;               /* Altura máxima menor */
-    overflow: hidden;
-    
-    max-width: 600px;                /* Largura menor */
-    margin: 10px auto;               /* Menos margem externa */
-    
-    border: 1px solid #fff;          /* Borda mais fina */
-    border-radius: 8px;              /* Cantos suavemente arredondados */
+    color: white;
   }
   
   #contacto h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
   }
   
   .contact-list {
-    max-width: 600px;
+    max-width: 300px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   
   .contact-item {
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    padding: 10px 14px;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
   }
   
-  /* Remove listas, usamos divs */
+  .contact-item:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
   
   .contact-item a {
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: white;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
-  /* Cores por tipo de contato */
-  
-  .contact-item.whatsapp a {
-    color: #25D366; /* verde WhatsApp */
+  .contact-item i {
+    font-size: 1.3em;
   }
   
-  .contact-item.instagram a {
-    color: #E1306C; /* rosa Instagram */
+  /* Ícones coloridos */
+  .contact-item a[href*="wa.me"] i {
+    color: #25D366; /* WhatsApp verde */
   }
   
-  .contact-item.email a {
-    color: #aaa2a2; /* branco para e-mails */
+  .contact-item a[href*="instagram"] i {
+    color: #E1306C; /* Instagram rosa */
   }
   
-  /* Efeito hover para todos */
-  
-  .contact-item a:hover {
-    color: #FFD700; /* dourado para destacar */
+  .contact-item a[href*="mailto"] i {
+    color: #CCCCCC; /* Email cinza claro */
   }
   
