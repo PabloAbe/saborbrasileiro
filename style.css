@@ -75,6 +75,29 @@
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
   }
+
+  /* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .prato {
+    height: 150px;
+  }
+
+  .prato h3 {
+    font-size: 18px;
+  }
+
+  .contact-item a {
+    font-size: 15px;
+  }
+
+  .mapa-google {
+    height: 250px;
+  }
+}
   
   .prato {
   position: relative;
